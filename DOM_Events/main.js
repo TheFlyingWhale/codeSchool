@@ -42,7 +42,18 @@ const el5 = generateButton('This is another button');
 const el6 = generateButton('Make h1 red');
 el6.addEventListener('click', changeColorRed);
 
-let elements = [el1, el2, el3, el4, el5, el6];
+//Prints info about the event and removes the element that triggered the event from dom
+const eventHandlerFunction = (event) => {
+    console.log(event);
+    console.log(event.target);
+    console.log(event.type);
+    console.log(event.timeStamp);
+    event.path[0].remove();
+}
+
+const el7 = generateButton('eventHandlerFunction');
+el7.addEventListener('click', eventHandlerFunction);
+
+let elements = [el1, el2, el3, el4, el5, el6, el7];
 
 renderToApp(elements);
-
