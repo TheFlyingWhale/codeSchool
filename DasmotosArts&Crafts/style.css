@@ -1,0 +1,49 @@
+head{
+    margin-top: 0px;
+}
+
+#head{
+    width: 100%;
+    text-align: center;
+    background-image: url("./img/pattern.webp");
+    
+}
+
+#brushes{
+    background-color: mediumspringgreen;
+}
+
+#frames{
+    background-color: lightcoral;
+}
+
+#paint{
+    background-color: skyblue;
+}
+
+.price{
+    font-weight: bold;
+    color: blue;
+}
+
+p{
+    font-family: Helvetica;
+}
+
+h1{
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+}
+
+h2{
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+h3{
+    font-family: Helvetica;
+}
