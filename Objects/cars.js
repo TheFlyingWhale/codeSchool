@@ -1,5 +1,5 @@
-const carMakes = ['Jaguar', 'Audi', 'Ferrari']
-const carColors = ['Red', 'Green', 'Blue']
+const carMakes = ['Jaguar', 'Audi', 'Ferrari', 'Honda', 'BMW']
+const carColors = ['Red', 'Green', 'Blue', 'White', 'Black']
 
 class Car {
     constructor(make, color, milage = 0) {
@@ -27,21 +27,21 @@ class Car {
     drive(length = 1) {
         this._milage += length
     }
-}
 
-const createRandomCars = (num) => {
-    const cars = []
-    for (let i = 0; i < num; i++) {
-        const name = carMakes[Math.floor(Math.random() * carMakes.length)]
-        const make = carColors[Math.floor(Math.random() * carColors.length)]
-        const car = new Car(name, make)
-        cars.push(car)
+    logInfo(){
+        console.log(`This ${this.make} is ${this._color} and have driven ${this._milage} km`);
     }
-    return cars
+
+    getInfo(){
+        return `This ${this.make} is ${this._color} and have driven ${this._milage} km`
+    }
+
+    random(){
+        this._make = carMakes[Math.floor(Math.random() * carMakes.length)]
+        this._color = carColors[Math.floor(Math.random() * carColors.length)]
+        this._milage = Math.floor(Math.random()* 1000)
+        return this;
+    }
 }
 
-const cars = createRandomCars(5)
-
-cars[0].drive(10)
-
-console.log(cars)
+export default Car;
